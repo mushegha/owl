@@ -1,0 +1,17 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "0.0.0",
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    },
+    "version": {
+      "message": "chore(release): %s",
+      "conventionalCommits": true,
+      "allowBranch": "master",
+      "push": false
+    }
+  }
+}

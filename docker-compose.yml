@@ -1,13 +1,11 @@
-version: "3.2"
+version: "3.4"
 
 services:
 
   api:
     build:
-      context: .
-    image: api
-    container_name: api-api
-    env_file: docker-compose.env
+      context: ./packages/api
+    env_file: .env
     environment:
       SERVICES: api
       PORT: 3000
@@ -22,10 +20,8 @@ services:
 
   greeter:
     build:
-      context: .
-    image: api
-    container_name: api-greeter
-    env_file: docker-compose.env
+      context: ./packages/api
+    env_file: .env
     environment:
       SERVICES: greeter
     labels:
@@ -35,7 +31,6 @@ services:
 
   traefik:
     image: traefik:1.7
-    container_name: traefik
     command:
       - "--api"
       - "--docker"

@@ -15,6 +15,12 @@ npm install -g lerna
 
 // bootstrap w/ internal dependencies
 lerna bootstrap
+
+// update env file
+cp .env.example .env
+
+// boot containers
+docker-compose up
 ```
 
 ### Making changes

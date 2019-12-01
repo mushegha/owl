@@ -1,0 +1,29 @@
+{
+  "name": "@owl/api-service-greeter",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Example service",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix index.js src/**/*.js",
+    "lint:staged": "lint-staged",
+    "test": "ava",
+    "test:watch": "ava -vw",
+    "test:coverage": "nyc ava -v"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "lint-staged": "^9.4.2",
+    "nyc": "^14.1.1"
+  },
+  "dependencies": {
+    "moleculer": "^0.13.11"
+  }
+}

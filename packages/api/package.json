@@ -1,29 +1,41 @@
 {
   "name": "@owl/api",
   "version": "0.0.0",
-  "private": true,
-  "description": "API layer root",
-  "main": "index.js",
+  "description": "My Moleculer microservices project",
   "scripts": {
-    "lint": "eslint --fix index.js src/**/*.js",
-    "lint:staged": "lint-staged",
-    "test": "ava",
-    "test:watch": "ava -vw",
-    "test:coverage": "nyc ava -v"
+    "dev": "moleculer-runner --repl --hot services",
+    "start": "moleculer-runner",
+    "cli": "moleculer connect TCP",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "dc:up": "docker-compose up --build -d",
+    "dc:down": "docker-compose down"
   },
-  "license": "MIT",
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
   "devDependencies": {
-    "ava": "^2.4.0",
-    "eslint": "^6.5.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "lint-staged": "^9.4.2",
-    "nyc": "^14.1.1"
+    "eslint": "^6.1.0",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
+    "moleculer-repl": "^0.5.7"
   },
   "dependencies": {
-    "moleculer": "^0.13.11"
+    "moleculer-web": "^0.8.5",
+    "moleculer": "^0.13.9"
+  },
+  "engines": {
+    "node": ">= 8.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
   }
 }

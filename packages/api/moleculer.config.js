@@ -1,5 +1,7 @@
 'use strict'
 
+const TRANSPORTER = 'NATS'
+
 /**
  * Moleculer ServiceBroker configuration file
  *
@@ -32,7 +34,7 @@ module.exports = {
 
   // Define transporter.
   // More info: https://moleculer.services/docs/0.13/networking.html
-  transporter: 'TCP',
+  transporter: TRANSPORTER,
 
   // Define a cacher. More info: https://moleculer.services/docs/0.13/caching.html
   cacher: 'Memory',

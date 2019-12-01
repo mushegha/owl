@@ -9,6 +9,10 @@ services:
     environment:
       SERVICES: api
       PORT: 3000
+    links:
+      - nats
+    depends_on:
+      - nats
     labels:
       - "traefik.enable=true"
       - "traefik.backend=api"
@@ -24,10 +28,19 @@ services:
     env_file: .env
     environment:
       SERVICES: greeter
+    links:
+      - nats
+    depends_on:
+      - nats
     labels:
       - "traefik.enable=false"
     networks:
       - internal
+
+  nats:
+    image: nats
+    ports:
+      - "4222:4222"
 
   traefik:
     image: traefik:1.7

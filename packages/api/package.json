@@ -26,7 +26,8 @@
   "dependencies": {
     "@owl/api-service-greeter": "*",
     "moleculer": "^0.13.9",
-    "moleculer-web": "^0.8.5"
+    "moleculer-web": "^0.8.5",
+    "nats": "^1.3.2"
   },
   "engines": {
     "node": ">= 8.x.x"

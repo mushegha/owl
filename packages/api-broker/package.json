@@ -1,5 +1,5 @@
 {
-  "name": "@owl/api",
+  "name": "@owl/api-broker",
   "version": "0.0.0",
   "description": "My Moleculer microservices project",
   "scripts": {

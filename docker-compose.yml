@@ -4,7 +4,7 @@ services:
 
   api:
     build:
-      context: ./packages/api
+      context: ./packages/api-broker
     env_file: .env
     environment:
       SERVICES: api
@@ -22,9 +22,9 @@ services:
     networks:
       - internal
 
-  greeter:
+  api-broker-greeter:
     build:
-      context: ./packages/api
+      context: ./packages/api-broker
     env_file: .env
     environment:
       SERVICES: greeter
